@@ -62,14 +62,6 @@ const Header = () => {
         </a>
       </div> */}
       <div className="flex items-center gap-x-4">
-        <div className="cursor-pointer tooltip ">
-          <img
-            src="binance-smart-chain-bsc-logo-9C34053D61-seeklogo.png"
-            className="rounded-full w-9"
-            alt=""
-          />
-          <span className="tooltiptext">BNB Smart Chain</span>
-        </div>
         <ButtonPrimary
           className="px-4 py-[10px] lg:px-5 lg:py-3 lg:min-w-[140px]"
           onClick={!isConnected ? onClickConnect : onClickCopyAddress}
