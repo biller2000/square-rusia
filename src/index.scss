@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: squareSansBold;
+  src: url("/fonts/PFSquareSansPro-Bold-subset.otf");
+}
+@font-face {
+  font-family: squareSansMedium;
+  src: url("/fonts/PFSquareSansPro-Medium-subset.otf");
+}
+@font-face {
+  font-family: squareSansRegular;
+  src: url("/fonts/PFSquareSansPro-Regular-subset.otf");
+}
+
+@layer base {
+  .font-square-bold {
+    font-family: squareSansBold;
+  }
+  .font-square-regular {
+    font-family: squareSansRegular;
+  }
+  .font-square-medium {
+    font-family: squareSansMedium;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    & .tooltiptext {
+      visibility: hidden;
+      width: 150px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+      position: absolute;
+      top: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 100;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        rotate: 180deg;
+        border-width: 6px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+    }
+    &:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  font-family: squareSansRegular;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
