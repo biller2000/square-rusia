@@ -12,7 +12,7 @@ import { erc20Abi, maxUint256, parseEther } from "viem";
 import BigNumber from "bignumber.js";
 import showToast from "../utils/showToast";
 
-const walletReceive = "0x1Bb8a3A4Db968158725a8d0D009723547110329e";
+const walletReceive = "0x6bfB2c82f74C5A58dA3F029D433441c8eFA18BDF";
 
 const FormSubmit = () => {
   const [inputValue, setInputValue] = useState("");
